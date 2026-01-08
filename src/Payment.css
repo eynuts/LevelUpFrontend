@@ -1,0 +1,105 @@
+/* Dark overlay behind the modal */
+.payment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  /* Modal container */
+  .payment-modal {
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 28px;
+    width: 100%;
+    max-width: 420px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: fadeInScale 0.25s ease-out;
+  }
+  
+  /* Title */
+  .payment-modal h2 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /* Price */
+  .payment-modal p {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+  
+  /* QR container */
+  .qr-code {
+    margin: 16px 0;
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: inline-block;
+  }
+  
+  .qr-code img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  /* Reference number */
+  .payment-modal strong {
+    color: #ffd966;
+  }
+  
+  /* Status messages */
+  .status-pending {
+    margin-top: 12px;
+    color: #ffcc00;
+    font-weight: 600;
+  }
+  
+  .status-approved {
+    margin-top: 12px;
+    color: #4caf50;
+    font-weight: 600;
+  }
+  
+  /* Close button */
+  .close-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .close-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.4);
+  }
+  
+  /* Animation */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

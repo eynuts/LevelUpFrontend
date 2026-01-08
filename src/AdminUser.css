@@ -1,0 +1,205 @@
+/* AdminUser.css */
+
+.user-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* --- Header & Search Bar --- */
+  .user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .header-info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  
+  .header-info p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.2s;
+    background: white;
+  }
+  
+  .search-box input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+  
+  /* --- Table Styles --- */
+  .user-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th {
+    background: #f8fafc;
+    padding: 16px 24px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 700;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .user-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+  }
+  
+  /* --- Profile Cell --- */
+  .profile-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .avatar-wrapper {
+    color: #cbd5e1;
+    background: #f1f5f9;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .name-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.95rem;
+  }
+  
+  .user-uid {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    font-family: monospace;
+  }
+  
+  /* --- Contact Cell --- */
+  .email-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 0.9rem;
+  }
+  
+  /* --- Role Pills --- */
+  .role-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .role-pill.admin {
+    background-color: #eef2ff;
+    color: #4f46e5;
+  }
+  
+  .role-pill.user {
+    background-color: #f8fafc;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+  }
+  
+  /* --- Management Buttons --- */
+  .btn-role-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #475569;
+  }
+  
+  .btn-role-toggle:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+  }
+  
+  .btn-role-toggle.is-admin {
+    background: #fff1f2;
+    color: #e11d48;
+    border-color: #fecdd3;
+  }
+  
+  .btn-role-toggle.is-admin:hover {
+    background: #ffe4e6;
+  }
+  
+  /* Row Highlight for Admin */
+  .admin-row {
+    background-color: #fafbff;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  @media (max-width: 640px) {
+    .user-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-box {
+      max-width: 100%;
+    }
+  }

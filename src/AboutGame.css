@@ -1,0 +1,18 @@
+.about-card {
+    text-align: left;
+    max-width: 900px;
+  }
+  
+  .about-heading {
+    color: #3e2723;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text {
+    color: #3e2723;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  

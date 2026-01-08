@@ -1,0 +1,136 @@
+/* --- TEACHER PAGE STYLES (NO INTERNAL SCROLL) --- */
+
+/* Allow the page to scroll naturally */
+.teacher-page-wrapper {
+    height: auto !important;
+    min-height: 100vh;
+}
+
+/* Make the card expand with content */
+.teacher-full-card {
+    height: auto !important;
+    max-height: none !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    display: block !important; /* Change from flex to block for natural flow */
+}
+
+.subject-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.game-select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: 3px solid #3e2723;
+    background: white;
+    font-family: 'Lilita One', cursive;
+    color: #3e2723;
+    font-size: 1rem;
+}
+
+/* The list is no longer a scroll area */
+.questions-list {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.question-entry {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgba(62, 39, 35, 0.1);
+}
+
+.q-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.q-number {
+    background: #3e2723;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.q-input-main {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #3e2723;
+    border-radius: 12px;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.1rem;
+}
+
+.options-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.option-field.correct-selected {
+    border-color: #4caf50;
+    background: #e8f5e9;
+}
+
+.option-field input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Lilita One', cursive;
+    color: #3e2723;
+    font-size: 1rem;
+}
+
+.option-field input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #f57c00;
+}
+
+.teacher-footer-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 2rem;
+    border-top: 3px dashed rgba(62, 39, 35, 0.2);
+}
+
+.access-code-box {
+    background: #3e2723;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.code-value {
+    font-size: 2.5rem;
+    color: #ffb74d;
+}
+
+/* Fix for small screens */
+@media (max-width: 850px) {
+    .options-layout {
+        grid-template-columns: 1fr;
+    }
+}

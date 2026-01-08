@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+  overflow-x: hidden;
+}
+
+.home-page {
+  font-family: 'Lilita One', cursive;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- BACKGROUND --- */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* --- NAVIGATION --- */
+.game-nav {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: clamp(0.5rem, 1.5vw, 0.8rem) clamp(1rem, 5vw, 2.5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.nav-spacer {
+  width: clamp(50px, 10vw, 100px);
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2.5rem);
+}
+
+.game-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.game-nav a.active {
+  color: #f57c00;
+  border-bottom: 2px solid #f57c00;
+}
+
+/* --- LOGIN PILL --- */
+.login-pill {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 10px);
+  padding: clamp(2px, 0.8vw, 4px) clamp(6px, 2vw, 14px);
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* --- USER AVATAR IMAGE --- */
+.avatar-img {
+    width: 100%;        /* Make it fit the container */
+    height: 100%;       /* Make it fit the container */
+    border-radius: 50%; /* Keep it circular */
+    object-fit: cover;  /* Crop to fit without distortion */
+  }
+  
+  /* Optional: Ensure the avatar container doesn't stretch */
+  .login-avatar {
+    width: clamp(24px, 3vw, 32px);
+    height: clamp(24px, 3vw, 32px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   /* Make sure the image doesn't overflow */
+  }
+  
+
+.login-text {
+  color: #0369a1;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* --- MAIN SECTION --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* --- GLASS CARD --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: clamp(20px, 5vw, 40px);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  width: clamp(300px, 80%, 900px);
+  height: auto;           /* Let height grow naturally */
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.4);
+  overflow: visible;
+}
+
+.badge-teacher {
+  background: #3e2723;
+  color: white;
+  padding: clamp(0.3rem, 0.8vw, 0.4rem) clamp(1rem, 2vw, 2rem);
+  border-radius: clamp(5px, 2vw, 10px);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  letter-spacing: 2px;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.game-title {
+  color: #3e2723;
+  font-size: clamp(2rem, 5vw, 3rem); /* smaller max to fit viewport */
+  margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+  text-shadow: 2px 2px 0px white;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* --- BUTTON --- */
+.download-button {
+  background: linear-gradient(to bottom, #ffb74d, #f57c00);
+  border: none;
+  border-bottom: clamp(3px, 0.5vw, 6px) solid #bf360c;
+  color: white;
+  padding: clamp(0.8rem, 1.5vw, 1.5rem) clamp(2rem, 6vw, 4rem);
+  border-radius: clamp(12px, 3vw, 18px);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-family: 'Lilita One', cursive;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.download-button:active {
+  border-bottom-width: 0;
+  transform: translateY(4px);
+}
+
+.sub-text {
+  color: #3e2723;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-weight: bold;
+  margin-top: clamp(0.5rem, 1vw, 1rem);
+  text-decoration: underline;
+}
+
+/* --- MODES GRID --- */
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(0.8rem, 2vw, 1.5rem);
+  width: 100%;
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+}
+
+.wood-card {
+  background: #8d6e63;
+  border: clamp(2px, 0.5vw, 4px) solid #3e2723;
+  border-radius: clamp(10px, 3vw, 20px);
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+  text-align: center;
+  height: 280px;
+}
+
+.emoji-box {
+    background: #a1887f;
+    height: clamp(60px, 20vw, 900px);
+    border-radius: clamp(8px, 2vw, 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(0.5rem, 1vw, 0.8rem);
+  
+    /* --- ADD THESE THREE LINES --- */
+    background-size: contain;     /* Forces the image to fit the box */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    background-position: center;  /* Centers the icon in the box */
+  }
+
+.card-title { 
+  font-size: clamp(0.9rem, 2vw, 1rem); 
+  margin: 0; 
+  text-transform: uppercase; 
+}
+
+.card-desc { 
+  font-size: clamp(0.7rem, 1.5vw, 0.75rem); 
+  color: #ffe0b2; 
+  margin-top: clamp(2px, 1vw, 4px); 
+}
+
+/* --- FOOTER --- */
+.game-footer {
+  background: rgba(0,0,0,0.9);
+  padding: clamp(0.5rem, 1.5vw, 0.8rem);
+  text-align: center;
+  font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+  flex-shrink: 0;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 850px) {
+  .nav-spacer { display: none; }
+  .game-nav { flex-direction: column; gap: clamp(0.5rem, 1vw, 1rem); }
+  .modes-grid { grid-template-columns: 1fr; gap: clamp(0.5rem, 2vw, 0.8rem); }
+  .glass-card { overflow-y: visible; padding: clamp(1rem, 3vw, 2rem); }
+}

@@ -1,0 +1,170 @@
+/* AdminRevenue.css */
+
+.revenue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* --- Revenue Card Base --- */
+  .revenue-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .revenue-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* --- Card Header --- */
+  .revenue-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Wrapper for the Icon and Tag */
+  .header-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .revenue-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Icon Colors */
+  .daily .revenue-icon-wrapper { background: #ecfdf5; color: #10b981; }
+  .monthly .revenue-icon-wrapper { background: #eef2ff; color: #6366f1; }
+  .yearly .revenue-icon-wrapper { background: #fff7ed; color: #f59e0b; }
+  
+  .revenue-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #64748b;
+  }
+  
+  /* --- Download Button --- */
+  .download-btn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .download-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+  }
+  
+  .download-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* --- Card Body --- */
+  .revenue-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .revenue-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  .revenue-amount {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+  }
+  
+  /* --- Trends & Stats --- */
+  .revenue-trend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+  }
+  
+  .revenue-trend.positive {
+    color: #10b981;
+  }
+  
+  .revenue-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 12px;
+  }
+  
+  /* --- Progress Bar --- */
+  .progress-container {
+    margin-top: 16px;
+  }
+  
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+  }
+  
+  .progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #818cf8);
+    border-radius: 10px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Responsive Tweak */
+  @media (max-width: 480px) {
+    .revenue-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .revenue-card {
+      padding: 20px;
+    }
+  }
