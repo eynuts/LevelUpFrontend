@@ -47,7 +47,7 @@ const Payment = ({ onClose }) => {
       if (foundApproved) {
         // ✅ Payment approved: auto-download and close modal
         window.location.href =
-          'https://github.com/eynuts/LevelUp/releases/download/1.0/LevelUp.rar';
+          'https://github.com/eynuts/LevelUp/releases/download/1.0.0/CampusChronicles.rar';
         onClose();
       } else if (foundPending) {
         setStatus('pending');
@@ -140,3 +140,4 @@ const Payment = ({ onClose }) => {
 };
 
 export default Payment;
+
