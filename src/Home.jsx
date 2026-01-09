@@ -160,7 +160,7 @@ const Home = () => {
         <main className="main-content">
           <div className="glass-card">
             <h1 className="game-title">
-              LEVEL UP:<br />CAMPUS CASE
+              CAMPUS CHRONICLES:<br />ACADEMIC ADVENTURE
             </h1>
 
             <div className="cta-section">
@@ -222,3 +222,4 @@ const GameModeCard = ({ img, hoverImg }) => {
 };
 
 export default Home;
+
